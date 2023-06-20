@@ -1,0 +1,18 @@
+rm -rf ./FunImgARCWFS
+
+rm -rf ./S2_FunImgARCWFS
+rm -rf ./S3_FunImgARCWFS
+rm -rf ./S4_FunImgARCWFS
+
+rm -rf ./Results/FC_FunImgARCWFS
+rm -rf ./Results/ROISignals_FunImgARCWFS
+
+rm -rf ./S2_Results/FC_FunImgARCWFS
+rm -rf ./S2_Results/S2_ROISignals_FunImgARCWFS
+
+rm -rf ./S3_Results/FC_FunImgARCWFS
+rm -rf ./S3_Results/S3_ROISignals_FunImgARCWFS
+
+rm -rf ./S4_Results/FC_FunImgARCWFS
+rm -rf ./S4_Results/S4_ROISignals_FunImgARCWFS
+

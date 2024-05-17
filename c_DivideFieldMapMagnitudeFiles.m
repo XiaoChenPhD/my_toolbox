@@ -36,8 +36,8 @@ TE(find(TE == 0),:) = [];
 ShortTE = min(unique(TE));
 LongTE = max(unique(TE));
 
-Magnitude1Dir = [WorkingDirectory,'/FieldMap/Magnitude1Raw/',SubjectName];
-Magnitude2Dir = [WorkingDirectory,'/FieldMap/Magnitude2Raw/',SubjectName];
+Magnitude1Dir = [WorkingDirectory,filesep,'FieldMap',filesep,'Magnitude1Raw',filesep,SubjectName];
+Magnitude2Dir = [WorkingDirectory,filesep,'FieldMap',filesep,'Magnitude2Raw',filesep,SubjectName];
 mkdir(Magnitude1Dir);mkdir(Magnitude2Dir);
 
 DicomInfo = [];
@@ -47,10 +47,10 @@ for iFile = 1:length(FileInfo)
     end
     DicomInfo = dicominfo([FileInfo(iFile).folder,filesep,FileInfo(iFile).name]);%to give the full path
     if DicomInfo.EchoTime == ShortTE
-        copyfile([FileInfo(iFile).folder,'/',FileInfo(iFile).name], ...
+        copyfile([FileInfo(iFile).folder,filesep,FileInfo(iFile).name], ...
             Magnitude1Dir);
     elseif DicomInfo.EchoTime == LongTE
-        copyfile([FileInfo(iFile).folder,'/',FileInfo(iFile).name], ...
+        copyfile([FileInfo(iFile).folder,filesep,FileInfo(iFile).name], ...
             Magnitude2Dir);
     end
 end
